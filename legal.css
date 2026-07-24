@@ -1,0 +1,299 @@
+:root {
+  color-scheme: light dark;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.8;
+  color: #1e293b;
+  background: #f8fafc;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #4338ca;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.container {
+  width: min(100% - 32px, 780px);
+  margin: 0 auto;
+  padding: 48px 0 56px;
+}
+
+.page-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #4f46e5;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  line-height: 1.3;
+}
+
+.lead {
+  margin: 16px auto 0;
+  max-width: 620px;
+  color: #475569;
+}
+
+.card,
+.link-card,
+.notice {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 6%);
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 28px;
+}
+
+h2 {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eef2ff;
+  color: #0f172a;
+  font-size: 1.18rem;
+  line-height: 1.5;
+}
+
+h3 {
+  margin: 24px 0 8px;
+  color: #1e293b;
+  font-size: 1rem;
+}
+
+h3:first-of-type {
+  margin-top: 0;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 8px 0 16px;
+  padding-left: 1.4rem;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+.primary-link {
+  display: inline-block;
+  border-radius: 10px;
+  background: #4f46e5;
+  padding: 10px 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  width: 25%;
+  min-width: 8.5rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+tr:last-child th,
+tr:last-child td {
+  border-bottom: 0;
+}
+
+td ul {
+  margin-top: 0;
+}
+
+.notice {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border-color: #c7d2fe;
+  background: #eef2ff;
+  color: #312e81;
+  font-size: 0.9rem;
+}
+
+.updated {
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 0.84rem;
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 20px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.footer-nav [aria-current="page"] {
+  color: #334155;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.link-card:hover {
+  border-color: #a5b4fc;
+}
+
+.link-card span {
+  font-weight: 700;
+}
+
+.link-card small {
+  margin-top: 4px;
+  color: #64748b;
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(100% - 24px, 780px);
+    padding-top: 32px;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+
+  th,
+  td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 6px;
+  }
+
+  th {
+    padding-top: 18px;
+    border-bottom: 0;
+  }
+
+  td {
+    padding-top: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #e2e8f0;
+    background: #0f172a;
+  }
+
+  a {
+    color: #a5b4fc;
+  }
+
+  h1,
+  h2,
+  h3,
+  th,
+  .link-card {
+    color: #f8fafc;
+  }
+
+  .lead,
+  .link-card small,
+  .updated {
+    color: #94a3b8;
+  }
+
+  .eyebrow {
+    color: #a5b4fc;
+  }
+
+  .card,
+  .link-card {
+    border-color: #334155;
+    background: #1e293b;
+    box-shadow: none;
+  }
+
+  h2 {
+    border-color: #3730a3;
+  }
+
+  th,
+  td,
+  .footer-nav {
+    border-color: #334155;
+  }
+
+  .notice {
+    border-color: #4338ca;
+    background: #312e81;
+    color: #e0e7ff;
+  }
+}
